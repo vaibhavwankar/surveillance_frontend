@@ -11,6 +11,7 @@ import { LoginService } from '../../services/login.service';
     styleUrls: ['login.component.css']
 })
 
+
 export class LoginComponent {
 
     model:any;
@@ -24,7 +25,21 @@ export class LoginComponent {
 
 
     login() {
+        
         this.loginService.login(this.model.username, this.model.password)
+        .subscribe(data=>{
+            if(data){
+            console.log(data)
+            this.router.navigate(['dashboard']);
+            }
+            else{
+            this.router.navigate(['login']);
+            console.log(data)
+            }
+        })
+
+            
+        }
             
     }
-}
+
