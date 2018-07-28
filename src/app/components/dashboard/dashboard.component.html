@@ -1,1 +1,56 @@
-dashboard
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Surveillance System</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Welcome Name !</p>
+            <li class="active">
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Clients</a>
+            </li>
+            <li>
+                <a href="#">Securities</a>
+            </li>
+            <li>
+                <a href="#">Buy/Sell</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="#" class="download">Logout</a>
+            </li>
+            <li>
+                <a href="#" class="article">Help</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Home</span>
+                </button>
+
+            </div>
+        </nav>
+
+
+        <router-outlet></router-outlet>
+
+    </div>
+
+
+</div>
