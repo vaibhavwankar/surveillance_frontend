@@ -19,7 +19,6 @@ import {BuySellDialogComponent} from './components/buysell/buysell.component';
 
 
 
-
 import { LoginService } from './services/login.service';
 
 
@@ -31,7 +30,6 @@ import { LoginService } from './services/login.service';
     HomeComponent,
     BuysellComponent,
     BuySellDialogComponent,
-
   ],
   imports: [
     BrowserModule,
