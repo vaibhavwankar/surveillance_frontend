@@ -13,8 +13,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
+
 import { BuysellComponent } from './components/buysell/buysell.component';
 import {BuySellDialogComponent} from './components/buysell/buysell.component';
+
 
 
 
@@ -29,6 +31,7 @@ import { LoginService } from './services/login.service';
     HomeComponent,
     BuysellComponent,
     BuySellDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { LoginService } from './services/login.service';
   ],
   exports: [CommonModule,MatToolbarModule, MatInputModule, MatTableModule,MatProgressBarModule,MatRadioModule,  
   ],
+  exports: [CommonModule,MatToolbarModule, MatInputModule, MatTableModule,MatProgressBarModule,],
   providers: [LoginService],
   bootstrap: [AppComponent],
   entryComponents: [
