@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 import { AppRouting } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import {MatInputModule, MatTableModule, MatToolbarModule,MatProgressBarModule } from '@angular/material';
+import {MatInputModule, MatTableModule, MatToolbarModule,MatProgressBarModule} from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDialogModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
+
+import { BuysellComponent } from './components/buysell/buysell.component';
+import {BuySellDialogComponent} from './components/buysell/buysell.component';
+
+
 
 
 import { LoginService } from './services/login.service';
@@ -21,7 +28,10 @@ import { LoginService } from './services/login.service';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    BuysellComponent,
+    BuySellDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,10 +40,17 @@ import { LoginService } from './services/login.service';
     FormsModule,
     MatToolbarModule, MatInputModule, MatTableModule,MatProgressBarModule,
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatRadioModule,
+    MatDialogModule
+  ],
+  exports: [CommonModule,MatToolbarModule, MatInputModule, MatTableModule,MatProgressBarModule,MatRadioModule,  
   ],
   exports: [CommonModule,MatToolbarModule, MatInputModule, MatTableModule,MatProgressBarModule,],
   providers: [LoginService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    BuySellDialogComponent,
+  ],
 })
 export class AppModule { }
