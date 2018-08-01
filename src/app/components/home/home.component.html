@@ -1,53 +1,76 @@
+
+<h3>Overall Limit</h3>
 <div class="progress">
     <div id="dailylimiitprogressbar" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0"
-        aria-valuemax="100" [style.width]="progress+ '%'" ng-change="updateProgressbarcolor()">
-        {{progress}}%
+        aria-valuemax="100" [style.width]="user.o_per+ '%'" ng-change="updateProgressbarcolor()">
+        {{user.o_per}}% Of Daily Limit Completed
+    </div>
+</div>
+<div class="line"></div>
+<!-- <div class="progress">
+    <div id="dailylimiitprogressbar" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0"
+        aria-valuemax="100" [style.width]="user.sec1_per+ '%'" ng-change="updateProgressbarcolor()">
+        {{user.sec1_per}}% Of Sector1 Limit Completed
+
+
     </div>
 </div>
 <div class="line"></div>
 <div class="progress">
     <div id="dailylimiitprogressbar" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0"
-        aria-valuemax="100" [style.width]="progress+ '%'" ng-change="updateProgressbarcolor()">
-        {{progress}}%
+
+        aria-valuemax="100" [style.width]="user.sec2_per+ '%'" ng-change="updateProgressbarcolor()">
+        {{user.sec2_per}}% Of Sector2 Limit Completed
     </div>
 </div>
-<div class="line"></div>
-<div class="progress">
-    <div id="dailylimiitprogressbar" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0"
-        aria-valuemax="100" [style.width]="progress+ '%'" ng-change="updateProgressbarcolor()">
-        {{progress}}%
-    </div>
-</div>
-<div class="line"></div>
-<script type="text/javascript"> 
+<div class="line"></div> -->
+<!-- <script type="text/javascript"> 
+
     function updateProgressbarcolor() {
         var x = document.getElementById('dailylimiitprogressbar');
         if (x.style.width > 75) x.class="progress-bar-warning";
     }
-</script>
 
+</script> -->
+
+
+<h3>Orders Executed</h3>
 <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="position">
-      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    <ng-container matColumnDef="ClientId">
+        <mat-header-cell *matHeaderCellDef> ClientId </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.clientId}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="firstName">
-      <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.firstName}} </mat-cell>
+    <ng-container matColumnDef="Direction">
+        <mat-header-cell *matHeaderCellDef> Direction </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.direction}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="lastName">
-      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
+    <ng-container matColumnDef="LimitPrice">
+        <mat-header-cell *matHeaderCellDef> LimitPrice</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.limitPrice}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="email">
-      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+    <ng-container matColumnDef="Quantity">
+        <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.quantity}} </mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="Security">
+        <mat-header-cell *matHeaderCellDef> Security </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.security}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Tradedate">
+        <mat-header-cell *matHeaderCellDef> TradeDate </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.tradeDate}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Value">
+        <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
+    </ng-container>
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
+</mat-table>
