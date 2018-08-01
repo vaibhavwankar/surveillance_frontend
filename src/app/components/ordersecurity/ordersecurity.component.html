@@ -1,0 +1,23 @@
+<div class="example-container">
+    <mat-form-field appearance="outline">
+        <mat-label>Client Id</mat-label>
+        <input matInput [(ngModel)]="clientid" placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Security</mat-label>
+        <input matInput [(ngModel)]="data.security_name" placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Quantity</mat-label>
+        <input matInput [(ngModel)]="quantity" placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput [(ngModel)]="data.price" placeholder="Placeholder">
+    </mat-form-field>
+    <mat-select placeholder="Direction">
+        <mat-option *ngFor="let x of ordertype" [value]="x.value">
+          {{x.viewValue}}
+        </mat-option>
+      </mat-select>
+</div>

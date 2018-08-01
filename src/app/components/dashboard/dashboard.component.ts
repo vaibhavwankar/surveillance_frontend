@@ -8,7 +8,7 @@ import { Component} from '@angular/core';
 })
 
 export class DashboardComponent{
-    
+    user:any= JSON.parse(localStorage.getItem("currentUser"));
 }
     
     

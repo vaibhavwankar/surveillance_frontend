@@ -8,17 +8,22 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material';
+import {MatProgressSpinnerModule} from '@angular/material';
+import {MatSelectModule} from '@angular/material';
+import {MatOptionModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { BuysellComponent } from './components/buysell/buysell.component';
-import {BuySellDialogComponent} from './components/buysell/buysell.component';
-
+import { OrderSecurityComponent } from './components/ordersecurity/ordersecurity.component';
 
 
 import { LoginService } from './services/login.service';
+import { DataService } from './services/ordersecurity.service';
+
+
 
 
 @NgModule({
@@ -28,7 +33,7 @@ import { LoginService } from './services/login.service';
     DashboardComponent,
     HomeComponent,
     BuysellComponent,
-    BuySellDialogComponent,
+    OrderSecurityComponent
   ],
   imports: [
     BrowserModule,
@@ -39,14 +44,17 @@ import { LoginService } from './services/login.service';
     CommonModule,
     BrowserAnimationsModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatOptionModule
   ],
-  exports: [CommonModule,MatToolbarModule, MatInputModule, MatTableModule,MatProgressBarModule,MatRadioModule,  
+  exports: [
+    CommonModule,
+    MatToolbarModule, 
+    MatInputModule, MatTableModule,MatProgressBarModule,MatRadioModule,MatProgressSpinnerModule
   ],
-  providers: [LoginService],
+  providers: [LoginService,DataService],
   bootstrap: [AppComponent],
-  entryComponents: [
-    BuySellDialogComponent,
-  ],
 })
 export class AppModule { }
