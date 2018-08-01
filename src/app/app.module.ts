@@ -8,14 +8,17 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material';
+
 import {MatProgressSpinnerModule} from '@angular/material';
 import {MatSelectModule} from '@angular/material';
 import {MatOptionModule} from '@angular/material';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
+
 import { BuysellComponent } from './components/buysell/buysell.component';
 import { OrderSecurityComponent } from './components/ordersecurity/ordersecurity.component';
 
@@ -33,7 +36,9 @@ import { DataService } from './services/ordersecurity.service';
     DashboardComponent,
     HomeComponent,
     BuysellComponent,
+
     OrderSecurityComponent
+
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,7 @@ import { DataService } from './services/ordersecurity.service';
     CommonModule,
     BrowserAnimationsModule,
     MatRadioModule,
+
     MatDialogModule,
     MatProgressSpinnerModule,
     MatSelectModule,
@@ -56,5 +62,7 @@ import { DataService } from './services/ordersecurity.service';
   ],
   providers: [LoginService,DataService],
   bootstrap: [AppComponent],
+
+  
 })
 export class AppModule { }

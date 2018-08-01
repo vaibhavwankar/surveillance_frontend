@@ -8,6 +8,7 @@ import {MatTableDataSource} from '@angular/material';
 })
 
 export class HomeComponent{
+
     
     user:any= JSON.parse(localStorage.getItem("currentUser"));
     constructor(){
@@ -18,7 +19,3 @@ export class HomeComponent{
     dataSource = new MatTableDataSource(this.user.list);
 
 }
-     
-    
-
-

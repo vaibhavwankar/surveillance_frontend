@@ -28,6 +28,7 @@ export class LoginComponent {
         
         this.loginService.login(this.model.username, this.model.password)
         .subscribe(data=>{
+
             if(data.status=="yes"){
             console.log(data)
             localStorage.setItem('currentUser', JSON.stringify(data));
@@ -38,6 +39,7 @@ export class LoginComponent {
             alert("Invalid Credentials")
             this.router.navigate(['login']);
             //console.log(data)
+
             }
         })
 
