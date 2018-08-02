@@ -1,3 +1,4 @@
+
 import { Component,OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
@@ -20,7 +21,10 @@ export class BuysellComponent implements OnInit {
   constructor(private http: HttpClient, public dataservice: DataService,private router:Router) { }
 
   ngOnInit() {
+
     this.http.post('http://localhost:9090/getSecurityList', { "brokerId": this.user.b.id })
+
+ 
       .subscribe(data => {
         this.temp = data
         this.dataSource = new MatTableDataSource(this.temp);
@@ -40,4 +44,5 @@ export class BuysellComponent implements OnInit {
 
 
 }
+
 

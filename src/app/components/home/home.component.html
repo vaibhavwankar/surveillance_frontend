@@ -1,3 +1,4 @@
+
 <h3>Overall Limit</h3>
 <div class="progress">
     <div id="dailylimiitprogressbar" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuemin="0"
@@ -7,6 +8,7 @@
 </div>
 
 <div class="line"></div>
+
 
 <h3>Orders Executed</h3>
 <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -47,4 +49,6 @@
     </ng-container>
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
 </mat-table>
+

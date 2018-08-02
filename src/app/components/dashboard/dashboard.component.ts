@@ -11,12 +11,14 @@ export class DashboardComponent{
     user:any= JSON.parse(localStorage.getItem("currentUser"));
 
 
+
     constructor(private router: Router){}
 
     logout(){
         localStorage.clear();
         this.router.navigate(['login']);
     }
+
 }
     
     

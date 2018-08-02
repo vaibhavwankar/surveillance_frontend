@@ -17,7 +17,10 @@ export class LoginService{
         //     return data;
         // })
 
+
         return this.http.post('http://localhost:9090/login',{"id":parseInt(username),"password":parseInt(password)})
+
+        
         .pipe(data=>{
             return data;
         })

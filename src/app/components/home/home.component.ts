@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
-import { DataSource } from '../../../../node_modules/@angular/cdk/table';
 
 @Component({
     selector: 'home',
@@ -9,6 +8,7 @@ import { DataSource } from '../../../../node_modules/@angular/cdk/table';
 })
 
 export class HomeComponent{
+
     user:any
     dataSource:any
     constructor()
@@ -29,5 +29,3 @@ export class HomeComponent{
 }
      
     
-
-

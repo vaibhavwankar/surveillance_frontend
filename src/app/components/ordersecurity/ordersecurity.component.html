@@ -12,11 +12,12 @@
         <mat-label>Quantity</mat-label>
         <input matInput [(ngModel)]="quantity" placeholder="Placeholder">
     </mat-form-field>
-    
+
     <mat-form-field appearance="outline">
         <mat-label>Price</mat-label>
         <input matInput [(ngModel)]="data.price" placeholder="Placeholder">
     </mat-form-field>
+
     <mat-select placeholder="Direction" [(value)]="direction">
         <mat-option *ngFor="let x of ordertype" [value]="x.value">
             {{x.viewValue}}
@@ -25,4 +26,5 @@
     <br/><br/>
     <button mat-raised-button color="primary" (click)="buysellorder()">Submit</button>
 </div>
+
 
