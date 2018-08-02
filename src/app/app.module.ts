@@ -22,9 +22,14 @@ import { HomeComponent } from './components/home/home.component';
 import { BuysellComponent } from './components/buysell/buysell.component';
 import { OrderSecurityComponent } from './components/ordersecurity/ordersecurity.component';
 
-
+import { SecuritiesComponent } from './components/securities/securities.component';
 import { LoginService } from './services/login.service';
 import { DataService } from './services/ordersecurity.service';
+import { SecuritiesDetailsComponent } from './components/securities-details/securities-details.component';
+import { DataServiceSecurities } from './services/securities-details.service';
+import { DataServiceClients} from './services/clients-details.service';
+import { ClientsComponent } from './components/clients/clients.component';
+import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
 
 
 
@@ -36,8 +41,11 @@ import { DataService } from './services/ordersecurity.service';
     DashboardComponent,
     HomeComponent,
     BuysellComponent,
-
-    OrderSecurityComponent
+    SecuritiesComponent,
+    OrderSecurityComponent,
+    SecuritiesDetailsComponent,
+    ClientsComponent,
+    ClientdetailsComponent
 
   ],
   imports: [
@@ -60,7 +68,7 @@ import { DataService } from './services/ordersecurity.service';
     MatToolbarModule, 
     MatInputModule, MatTableModule,MatProgressBarModule,MatRadioModule,MatProgressSpinnerModule
   ],
-  providers: [LoginService,DataService],
+  providers: [LoginService,DataService,DataServiceSecurities,DataServiceClients],
   bootstrap: [AppComponent],
 
   
