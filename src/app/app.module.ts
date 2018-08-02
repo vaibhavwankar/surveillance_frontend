@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRouting } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import {MatInputModule, MatTableModule, MatToolbarModule,MatProgressBarModule} from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +11,7 @@ import {MatDialogModule} from '@angular/material';
 import {MatProgressSpinnerModule} from '@angular/material';
 import {MatSelectModule} from '@angular/material';
 import {MatOptionModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -47,7 +48,8 @@ import { DataService } from './services/ordersecurity.service';
     MatDialogModule,
     MatProgressSpinnerModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatButtonModule
   ],
   exports: [
     CommonModule,

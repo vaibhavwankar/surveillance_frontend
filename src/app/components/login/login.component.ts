@@ -29,7 +29,7 @@ export class LoginComponent {
         this.loginService.login(this.model.username, this.model.password)
         .subscribe(data=>{
             if(data.status=="yes"){
-            console.log(data)
+            //console.log(data)
             localStorage.setItem('currentUser', JSON.stringify(data));
             this.router.navigate(['dashboard']);
             }

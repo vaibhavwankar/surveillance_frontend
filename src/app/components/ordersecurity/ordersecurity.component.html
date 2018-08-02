@@ -1,3 +1,4 @@
+
 <div class="example-container">
     <mat-form-field appearance="outline">
         <mat-label>Client Id</mat-label>
@@ -11,13 +12,17 @@
         <mat-label>Quantity</mat-label>
         <input matInput [(ngModel)]="quantity" placeholder="Placeholder">
     </mat-form-field>
+    
     <mat-form-field appearance="outline">
         <mat-label>Price</mat-label>
         <input matInput [(ngModel)]="data.price" placeholder="Placeholder">
     </mat-form-field>
-    <mat-select placeholder="Direction">
+    <mat-select placeholder="Direction" [(value)]="direction">
         <mat-option *ngFor="let x of ordertype" [value]="x.value">
-          {{x.viewValue}}
+            {{x.viewValue}}
         </mat-option>
-      </mat-select>
+    </mat-select>
+    <br/><br/>
+    <button mat-raised-button color="primary" (click)="buysellorder()">Submit</button>
 </div>
+

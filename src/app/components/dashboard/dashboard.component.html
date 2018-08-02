@@ -14,34 +14,37 @@
                 <a href="#">Clients</a>
             </li>
             <li>
-                <a href="#" >Securities</a>
+                <a href="#">Securities</a>
             </li>
             <li>
                 <a routerLink="./buysell">Buy/Sell</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">Contact</a>
-            </li>
+            </li> -->
         </ul>
 
         <ul class="list-unstyled CTAs">
             <li>
-                <a href="#" class="download">Logout</a>
+                <a class="download" (click)="logout()">Logout</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#" class="article">Help</a>
-            </li>
+            </li> -->
         </ul>
     </nav>
 
     <div id="content">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img class="img-responsive" src="../../../assets/images/dtbank_logo-300x188.jpg" style="width:55px;height:55px;">
             <div class="container-fluid">
 
                 <button type="button" id="sidebarCollapse" class="btn btn-info">
                     <!-- <i class="fas fa-align-left"></i> -->
-                    <h3><span>Compliance / Surveillance Management System</span></h3>
+                    <h3>
+                        <span>Compliance Management System</span>
+                    </h3>
                 </button>
 
             </div>
@@ -54,3 +57,10 @@
 
 
 </div>
+<style>
+    /*This stylesheet sets the width of all images to 100%: */
+
+    img {
+        width: 100%;
+    }
+</style>
