@@ -7,6 +7,8 @@ import { DataService } from '../../services/ordersecurity.service';
   templateUrl: 'ordersecurity.component.html',
   styleUrls: ['ordersecurity.component.css'],
 })
+
+
 export class OrderSecurityComponent {
     data:any;
 
