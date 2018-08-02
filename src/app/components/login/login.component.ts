@@ -30,7 +30,7 @@ export class LoginComponent {
         .subscribe(data=>{
 
             if(data.status=="yes"){
-            console.log(data)
+            //console.log(data)
             localStorage.setItem('currentUser', JSON.stringify(data));
             this.router.navigate(['dashboard']);
             }
