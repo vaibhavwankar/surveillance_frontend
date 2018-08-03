@@ -1,15 +1,14 @@
-<div >
-    <!-- <img class="img-responsive" src="../../../assets/images/dtbank_logo-300x188.jpg" style="width:55px;height:55px;"> -->
-
+<div class="img">
+    <img class="img-responsive" src="../../../assets/images/logincover.jpg" style="width:450px;height:137px;">
     <div class="login">
         <div class="login-triangle"></div>
 
-        <h2 class="login-header">Log in</h2>
+        <h2 class="login-header"><h4>Compliance Management System</h4></h2>
 
         <form class="login-container" (ngSubmit)="login()">
 
             <p>
-                <input type="email" placeholder="Email" [(ngModel)]="model.username" [ngModelOptions]="{standalone: true}">
+                <input type="email" placeholder="User Id" [(ngModel)]="model.username" [ngModelOptions]="{standalone: true}">
             </p>
 
 
@@ -22,4 +21,7 @@
             </p>
         </form>
     </div>
+
 </div>
+
+<!-- <img class="img-responsive" src="../../../assets/images/logologin.png" style="width:35px;height:40px;"> -->

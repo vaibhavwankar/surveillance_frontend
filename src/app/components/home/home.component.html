@@ -1,9 +1,9 @@
 
-<h3>Overall Limit</h3>
-<div class="progress">
+<h3>TRADING LIMIT ACHIEVED</h3>
+<div class="progress" style="height:40px">
     <div id="dailylimiitprogressbar" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuemin="0"
         aria-valuemax="100" [style.width]="user.o_per+ '%'">
-        {{user.o_per}}% Of Daily Limit Completed
+        <h3>{{user.o_per}}%</h3>
     </div>
 </div>
 
@@ -14,37 +14,37 @@
 <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="ClientId">
-        <mat-header-cell *matHeaderCellDef> ClientId </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> <h4>ClientId </h4></mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.clientId}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Direction">
-        <mat-header-cell *matHeaderCellDef> Direction </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> <h4>Direction </h4></mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.direction}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="LimitPrice">
-        <mat-header-cell *matHeaderCellDef> LimitPrice</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> <h4>LimitPrice</h4></mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.limitPrice}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Quantity">
-        <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> <h4>Quantity</h4> </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.quantity}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Security">
-        <mat-header-cell *matHeaderCellDef> Security </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> <h4>Security </h4></mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.security}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Tradedate">
-        <mat-header-cell *matHeaderCellDef> TradeDate </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> <h4>TradeDate </h4></mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.tradeDate}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Value">
-        <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> <h4>Value </h4></mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
     </ng-container>
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

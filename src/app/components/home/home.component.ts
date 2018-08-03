@@ -16,10 +16,10 @@ export class HomeComponent{
         this.user= JSON.parse(localStorage.getItem("currentUser"));
         this.dataSource = new MatTableDataSource(this.user.list);
         if(this.user.o_per > 75.0 &&  this.user.o_per<100.0){
-            alert(this.user.o_per+"% Of Your Daily Limit Completed")
+            alert(this.user.o_per+"% Of Your Daily Limit Achieved")
         }
         else if(this.user.o_per >= 100.0){
-            alert("100% Of Your Daily Limit Completed")
+            alert("100% Of Your Daily Limit Achieved")
         }
     }
    
