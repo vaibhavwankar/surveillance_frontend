@@ -23,7 +23,7 @@ export class ClientdetailsComponent implements OnInit {
 
   ngOnInit() {
     var client=this.dataservice.clientsDetailsData.client_id;
-    this.http.post('http://localhost:9000/getOrders', { "client_id":client})
+    this.http.post('http://localhost:9090/getOrders', { "client_id":client})
       .subscribe(data => {
         this.temp = data
       this.dataSource = new MatTableDataSource(this.temp);

@@ -23,7 +23,7 @@ export class SecuritiesComponent implements OnInit {
   constructor(private http: HttpClient, public dataservice: DataServiceSecurities,private router:Router) { }
 
   ngOnInit() {
-    this.http.post('http://localhost:9000/getSecurityList', { "brokerId": this.user.b.id })
+    this.http.post('http://localhost:9090/getSecurityList', { "brokerId": this.user.b.id })
       .subscribe(data => {
         this.temp = data
         this.dataSource = new MatTableDataSource(this.temp);

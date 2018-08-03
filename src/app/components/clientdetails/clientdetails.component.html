@@ -1,42 +1,42 @@
-<h1>CLIENT DETAILS</h1>
+<h1>CLIENT ORDERS</h1>
 <table #table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
   <ng-container matColumnDef="clientId">
-    <th mat-header-cell *matHeaderCellDef> CLIENT ID </th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Client Id </h4></th>
     <td mat-cell *matCellDef="let element">{{element.clientId}}</td>
   </ng-container>
 
   <ng-container matColumnDef="direction">
-    <th mat-header-cell *matHeaderCellDef> DIRECTION </th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Direction</h4> </th>
     <td mat-cell *matCellDef="let element">{{element.direction}}</td>
   </ng-container>
   <ng-container matColumnDef="quantity"> 
-    <th mat-header-cell *matHeaderCellDef> QUANTITY </th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Quantity</h4> </th>
     <td mat-cell *matCellDef="let element">{{element.quantity}}</td>
   </ng-container>
 
   <ng-container matColumnDef="limitPrice">
-    <th mat-header-cell *matHeaderCellDef> LIMIT PRICE </th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Limit Price </h4></th>
     <td mat-cell *matCellDef="let element">{{element.limitPrice}}</td>
   </ng-container>
 
   <ng-container matColumnDef="tradeDate">
-    <th mat-header-cell *matHeaderCellDef> TRADE DATE</th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Trade Date </h4></th>
     <td mat-cell *matCellDef="let element">{{element.tradeDate}}</td>
   </ng-container>
 
   <ng-container matColumnDef="tradeType">
-    <th mat-header-cell *matHeaderCellDef> TRADE TYPE </th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Trade Type </h4></th>
     <td mat-cell *matCellDef="let element">{{element.tradeType}}</td>
   </ng-container>
 
   <ng-container matColumnDef="value">
-    <th mat-header-cell *matHeaderCellDef> VALUE </th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Value </h4></th>
     <td mat-cell *matCellDef="let element">{{element.value}}</td>
   </ng-container>
 
   <ng-container matColumnDef="security">
-    <th mat-header-cell *matHeaderCellDef> SECURITY </th>
+    <th mat-header-cell *matHeaderCellDef> <h4>Security </h4></th>
     <td mat-cell *matCellDef="let element">{{element.security}}</td>
   </ng-container>
 

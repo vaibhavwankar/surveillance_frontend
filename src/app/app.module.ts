@@ -25,9 +25,6 @@ import { HomeComponent } from './components/home/home.component';
 import { BuysellComponent } from './components/buysell/buysell.component';
 import { OrderSecurityComponent } from './components/ordersecurity/ordersecurity.component';
 
-import { BuysellComponent } from './components/buysell/buysell.component';
-import { OrderSecurityComponent } from './components/ordersecurity/ordersecurity.component';
-
 import { SecuritiesComponent } from './components/securities/securities.component';
 import { LoginService } from './services/login.service';
 import { DataService } from './services/ordersecurity.service';
